@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- 2020-07-25 Сб 10:28 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>&lrm;</title>
+    <meta name="generator" content="Org mode" />
+    <meta name="author" content="max" />
+    <style type="text/css">
+     <!--/*--><![CDATA[/*><!--*/
+     .title  { text-align: center;
+         margin-bottom: .2em; }
+     .subtitle { text-align: center;
+         font-size: medium;
+         font-weight: bold;
+         margin-top:0; }
+     .todo   { font-family: monospace; color: red; }
+     .done   { font-family: monospace; color: green; }
+     .priority { font-family: monospace; color: orange; }
+     .tag    { background-color: #eee; font-family: monospace;
+         padding: 2px; font-size: 80%; font-weight: normal; }
+     .timestamp { color: #bebebe; }
+     .timestamp-kwd { color: #5f9ea0; }
+     .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+     .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+     .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+     .underline { text-decoration: underline; }
+     #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+     p.verse { margin-left: 3%; }
+     pre {
+         border: 1px solid #ccc;
+         box-shadow: 3px 3px 3px #eee;
+         padding: 8pt;
+         font-family: monospace;
+         overflow: auto;
+         margin: 1.2em;
+     }
+     pre.src {
+         position: relative;
+         overflow: visible;
+         padding-top: 1.2em;
+     }
+     pre.src:before {
+         display: none;
+         position: absolute;
+         background-color: white;
+         top: -10px;
+         right: 10px;
+         padding: 3px;
+         border: 1px solid black;
+     }
+     pre.src:hover:before { display: inline;}
+
+     table { border-collapse:collapse; }
+     caption.t-above { caption-side: top; }
+     caption.t-bottom { caption-side: bottom; }
+     td, th { vertical-align:top;  }
+     th.org-right  { text-align: center;  }
+     th.org-left   { text-align: center;   }
+     th.org-center { text-align: center; }
+     td.org-right  { text-align: right;  }
+     td.org-left   { text-align: left;   }
+     td.org-center { text-align: center; }
+     dt { font-weight: bold; }
+     .footpara { display: inline; }
+     .footdef  { margin-bottom: 1em; }
+     .figure { padding: 1em; }
+     .figure p { text-align: center; }
+     .inlinetask {
+         padding: 10px;
+         border: 2px solid gray;
+         margin: 10px;
+         background: #ffffcc;
+     }
+
+     .cat {
+         margin: 0 auto;
+         width: 30%;
+         min-width: 300px;
+         display: inline-block;
+         /* float:left; */
+     }
+
+     .cat .title  {
+         overflow: hidden;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+     }
+
+
+     .cat img {
+         /* max-width: 100%; */
+         display: block;
+         margin:auto;
+         width: 95%;
+         height:400px;
+         height: 50%;
+     }
+
+     .cat .price {
+         height: 50px;
+         margin:0;
+         padding:0;
+         position:relative;
+     }
+
+     .cat .price .current{
+         margin:0;
+         padding:0;
+         float: left;
+         color: red;
+         font-size: 2em;
+     }
+
+
+     .cat .price .old{
+         float: left;
+         color: black;
+         font-size: 1em;
+         text-decoration: line-through;
+         position:relative;
+         top:0;
+         padding-bottom:0;
+         margin-bottom:0;
+     }
+
+     .cat .category p{
+         font-size: 60%;
+         text-decoration: underline;
+     }
+
+     body {
+         margin: 0;
+         padding: 25px;
+         font-family: sans-serif;
+     }
+
+     /* Rating */
+
+     .rating {
+         margin: 0 0 1em 0;
+         padding: 0;
+         border: none;
+     }
+
+     /* Caption */
+
+     .rating__caption {
+         margin-bottom: 0.5em;
+         padding: 0;
+     }
+
+     /* Group */
+
+     .rating__group {
+         position: relative;
+         width: 10em;
+         height: 2em;
+         background-image: url(images/off.svg);
+         background-size: 2em auto;
+         background-repeat: repeat-x;
+     }
+
+     .rating__group:focus-within {
+         outline: 0.2em solid #4a90e2;
+         outline-offset: 0.2em;
+     }
+
+     /* Star */
+
+     .rating__star {
+         position: absolute;
+         top: 0;
+         left: 0;
+         margin: 0;
+         height: 2em;
+         font-size: inherit;
+         -webkit-appearance: none;
+         -moz-appearance: none;
+         appearance: none;
+         background-size: 2em auto;
+         background-repeat: repeat-x;
+     }
+
+     .rating__star:focus {
+         outline: none;
+     }
+
+     .rating__star:hover,
+     .rating__star:checked {
+         background-image: url(img/on.png);
+     }
+
+
+     .rating:checked {
+         background-image: url(img/on.png);
+     }
+
+     .rating__star:hover ~ .rating__star {
+         background-image: url(img/off.svg);
+     }
+     
+     
+
+     /* Options */
+
+     .rating__star:nth-of-type(1) {
+         z-index: 5;
+         width: 2em;
+     }
+
+     .rating__star:nth-of-type(2) {
+         z-index: 4;
+         width: 4em;
+     }
+
+     .rating__star:nth-of-type(3) {
+         z-index: 3;
+         width: 6em;
+     }
+
+     .rating__star:nth-of-type(4) {
+         z-index: 2;
+         width: 8em;
+     }
+
+     .rating__star:nth-of-type(5) {
+         z-index: 1;
+         width: 10em;
+     }
+
+     /*]]>*/-->
+    </style>
+  </head>
+  <body>
+    <div id="content">
+      <div class="cat">
+        <div class="figure">
+          <img src="./img/2432.otoymc.840.jpg" />
+        </div>
+        <div class="title"> <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D0%BD%D1%87%D0%BA%D0%B8%D0%BD_(%D0%BF%D0%BE%D1%80%D0%BE%D0%B4%D0%B0_%D0%BA%D0%BE%D1%88%D0%B5%D0%BA)">МанчкинМанчкинМанчкинМанчкинМанчкинМанчкинМанчкинМанчкинМанчкинМанчкин</a> </div>
+        <div class="category">
+          <p>Манчкин</p>
+        </div>
+        <div class="rating">
+
+          <fieldset class="rating">
+          <div class="rating__group">
+          <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+          <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+          <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+          <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+          <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">$5</div>
+          <div class="old">$10</div>
+        </div>
+        <div class="desc">
+          <p>
+          Манчкин – порода кошек, которая отличается укороченными лапами при сохранении пропорций тела и внешнего вида обычных представителей семейства.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="cat">
+        <div class="figure">
+          <img src="./img/Screenshot_2020-07-24%20%D0%9A%D0%BE%D1%82%20%D0%B2%20%D0%B4%D0%BE%D0%B1%D1%80%D1%8B%D0%B5%20%D1%80%D1%83%D0%BA%D0%B8%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE%20%E2%80%93%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D0%B2%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5,%20%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE,%20%D0%B4%D0%B0%D1%82%D0%B0%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F%2024%2007%202020%20%E2%80%93%20%D0%9A%D0%BE%D1%88%D0%BA%D0%B8.png" />
+        </div>
+
+
+        <div class="title"> <a href="https://youla.ru/moskva/zhivotnye/koshki/kot-v-dobryie-ruki-5f12b57c8c11ad0b8156af82">Рич</a> </div>
+        <div class="category">
+          <p>Дворняга</p>
+        </div>
+        <div class="rating">
+
+          <fieldset class="rating">
+          <div class="rating__group">
+          <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+          <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+          <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+          <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+          <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">$5</div>
+          <div class="old">$10</div>
+        </div>
+        <div class="desc">
+          <p>
+
+
+
+          Москва и МО.
+          Молодой кот Рич ищет семью.
+          Ричу около года, кастрирован, умело пользуется лотком и когтеточкой. Очень ласковый, дружелюбный и общительный котик. Это кот-компаньон, всегда хочет быть рядом с человеком, тарахтит без устали )))
+          Пристраивается в семью без маленьких детей по договору ответственного содержания, с ненавязчивым отслеживанием дальнейшей судьбы.
+          Сетки-антикот на окнах обязательны.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="cat">
+        <div class="figure">
+
+          <img src="./img/Screenshot_2020-07-24%20%D0%9C%D0%B5%D0%B9%D0%BD%20%D0%BA%D1%83%D0%BD%20%E2%80%93%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D0%B2%20%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B5,%20%D1%86%D0%B5%D0%BD%D0%B0%2010%20000%20%D1%80%D1%83%D0%B1%20,%20%D0%B4%D0%B0%D1%82%D0%B0%20%D1%80%D0%B0%D0%B7%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8F%2023%2007%202020%20%E2%80%93%20%D0%9A%D0%BE%D1%88%D0%BA%D0%B8.png" />
+        </div>
+
+
+        <div class="title"> <a href="">Джульет</a> </div>
+        <div class="category">
+          <p>Мейн кун</p>
+        </div>
+        <div class="rating">
+
+          <fieldset class="rating">
+          <div class="rating__group">
+          <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+          <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+          <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+          <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+          <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">$100</div>
+          <div class="old">$150</div>
+        </div>
+        <div class="desc">
+          <p>
+
+          Кошечка мейн кун Джульет. Отличный профиль, ровный носик, окрас цвета осенней листвы, начинает мурчать от одного прикосновения. Продажа в любимцы. Всё вопросы в личку. Кошечка 4,5 месяца, привита, готова к переезду. Цена указана в любимцы.
+
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="cat">
+        <div class="figure">
+
+          <img src="./img/9346_internet.jpg" />
+
+        </div>
+
+
+        <div class="title"> <a href="">Кабаре</a> </div>
+        <div class="category">
+          <p>Хайленд-страйт</p>
+        </div>
+        <div class="rating">
+          <fieldset class="rating">
+            <div class="rating__group">
+            <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+            <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+            <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+            <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+            <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">12 000 Р</div>
+        </div>
+        <div class="desc">
+          <p>
+            Предлагается к продаже красивый котик хайленд-страйт, окрас черный мраморный с белым. Котенку 6 мес., подрощен, воспитан, приучен к лотку, обработан от глист, привит. Рожден от клубных, выставочных родителей. Очень оасковый мальчишка, любит, чтобы его гладили. С документами. Цена указана при покупке в домашние любимцы. При покупке в разведение цена оговаривается отлельно. Территориально находится в Нижегородской области. Возможна доставка до Москвы.
+
+          </p>
+        </div>
+      </div>
+
+
+      <div class="cat">
+        <div class="figure">
+
+          <img src="./img/184663d0d0d8b0d0c05810.jpg" />
+        </div>
+
+
+        <div class="title"> <a href="">Котята</a> </div>
+        <div class="category">
+          <p>Сфинск канадский</p>
+        </div>
+        <div class="rating">
+          <fieldset class="rating">
+            <div class="rating__group">
+              <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+              <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+              <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+              <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+              <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">15 000 Р</div>
+        </div>
+        <div class="desc">
+          <p>
+
+            Милейшие котятки. Сфинкс канадский. Родились 26 мая 2020. Было 6 шт. Осталось: одна девочка с капелькой на носу и 1 белый мальчик. Сегодня – это шилопопый и игривый котенок, маленький, нежный, вкусно пахнущий детством. А завтра – это самый ласковый котофей в мире, который будет любить Вас больше всего на свете. Он будет знать, в какое время Вы возвращаетесь с работы и заранее ждать у входной двери. Это друг, который во всех домашних делах будет рядом, - смотреть с Вами телевизор, болеть за любимую футбольную команду. Он станет частью Вашей семьи и каждый раз, когда он будет обнимать Вас лапками и мурчать, Вы будете говорить ему: «Какое же счастье, что я забрал тебя домой!»
+            Котята здоровы, приученны к лотку. Готовы ехать домой.
+            Отдадим взрослым ответственным людям. Более подробное фото по запросу. Цена в зависимости от выбора котёнка! Торг уместен. Серый большой кот- это папа.
+
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="cat">
+        <div class="figure">
+          <img src="./img/3313756-cat-grass-lie-down-striped.jpg" />
+        </div>
+
+
+        <div class="title"> <a href="">Стася</a> </div>
+        <div class="category">
+          <p>Другая</p>
+        </div>
+        <div class="rating">
+          <fieldset class="rating">
+            <div class="rating__group">
+              <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+              <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+              <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+              <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+              <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">$100</div>
+          <div class="old">$150</div>
+        </div>
+        <div class="desc">
+          <p>
+            Сейчас без дома и без внимания сидят такие красивые, породистые, ласковые кошки, что нашей простой "шпротинке" Стасе, казалось бы, и не на что надеяться.
+            Но мы всё-таки ищем для неё добрых и любящих хозяев.
+            Стесенька молодая - около 1,5 лет. Стерилизована, привита, лоточек на 5+. Пристраивается одной кошечкой в семью в силу особенностей характера. Детке очень нужен свой человек.
+            Если найдётся доброе сердце, способное полюбить эту трепетную девочку, звоните
+
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="cat">
+        <div class="figure">
+
+          <img src="./img/s1200(3).jpg" />
+        </div>
+
+
+        <div class="title"> <a href="">Арнольд</a> </div>
+        <div class="category">
+          <p>Бенгальские коты</p>
+        </div>
+        <div class="rating">
+          <fieldset class="rating">
+            <div class="rating__group">
+              <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+              <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+              <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+              <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+              <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">7 000 Р</div>
+        </div>
+        <div class="desc">
+          <p>
+
+            Срочно !!
+
+            Окрас - розетка на золоте
+
+            Родились 15.06. Сейчас им 1,5 месяца, бронь Бесплатно .
+            Больше фото и видео в личку.
+
+            Со временем котята приобретут яркий окрас с выраженными пятнами, которые уже отчётливо прослеживаются.
+
+            Мордочки у котят очень милые и утонченные.
+
+            На последних фото - мать
+
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="cat">
+        <div class="figure">
+          <img src="./img/koshka-savanna-33.jpg" />
+        </div>
+
+
+        <div class="title"> <a href="">Марго</a> </div>
+        <div class="category">
+          <p>Саванна</p>
+        </div>
+        <div class="rating">
+          <fieldset class="rating">
+            <div class="rating__group">
+              <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+              <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+              <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+              <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+              <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">$100</div>
+          <div class="old">$150</div>
+        </div>
+        <div class="desc">
+          <p>
+
+            Продаётся Саванна ф5сбт. Королева Марго) Она так выглядет важно) На самом деле в этой малышке слились ум, грация,кокетливость) Эта малышня часами может смотреть на себя в зеркало и думать какая же я красивая! Когда наступают игры, то это маленький чертёнок, который играет и четко ловит перья на махалке) Она вольяжно пройдёт мимо вас и прильнёт, чтоб вы ее погладили и приголубили) Также ответит на ваши восхищения ее красотой. Больше о нас в соц сетях по названию питомника. ОФИЦИАЛЬНЫЙ ПИТОМНИК. Регистрация ТИКА. Свои курьеры. Больше фото и видео по запросу!
+          </p>
+        </div>
+      </div>
+
+
+
+
+      <div class="cat">
+        <div class="figure">
+
+          <img src="./img/97051858.jpg" />
+        </div>
+
+
+        <div class="title"> <a href=""></a> </div>
+        <div class="category">
+          <p>Корниш-Рекс</p>
+        </div>
+        <div class="rating">
+          <fieldset class="rating">
+            <div class="rating__group">
+              <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+              <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+              <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+              <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+              <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">11 000 Р</div>
+        </div>
+        <div class="desc">
+          <p>
+
+            Продаются котята КОРНИШ-РЕКС! Питомник PskovGrace
+
+            Предлагается к резерву шоколадный мальчик (д.р. 01.06.2020) - 18 т.р.
+
+            Продается очаровательный шоколадный мальчик! 1 год - 11 т.р.
+
+            Все вопросы по тел.
+          </p>
+        </div>
+      </div>
+
+
+
+      <div class="cat">
+        <div class="figure">
+
+          <img src="./img/0_143878_b18ff7d6_orig.jpg" />
+        </div>
+
+
+        <div class="title"> <a href="">Белла</a> </div>
+        <div class="category">
+          <p>Мейн кун</p>
+        </div>
+        <div class="rating">
+          <fieldset class="rating">
+            <div class="rating__group">
+              <input class="rating__star" type="radio" name="health" value="1" aria-label="Ужасно" checked>
+              <input class="rating__star" type="radio" name="health" value="2" aria-label="Сносно">
+              <input class="rating__star" type="radio" name="health" value="3" aria-label="Нормально">
+              <input class="rating__star" type="radio" name="health" value="4" aria-label="Хорошо">
+              <input class="rating__star" type="radio" name="health" value="5" aria-label="Отлично">
+            </div>
+          </fieldset>
+
+
+        </div>
+        <div class="price">
+          <div class="current">35 000 Р</div>
+        </div>
+        <div class="desc">
+          <p>
+            Чистокровные родители Мейн-Кун с родословными ,привита,вет.паспорт,приучена к лотку,приветливая ,очень ласковая,с шикарным окрасом,мурчащая,росла с ребёнком,социально адаптирована ,кушает как мясо ,так и корм премиум класса(сухой,мокрый) как в разведение ,так и в любимцы ,для ответственных хозяев ,по всем вопросам пишите ,звоните
+            Рождена 26.11.2019
+            Кличка Белла
+
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+  </body>
+</html>
